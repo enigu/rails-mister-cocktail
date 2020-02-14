@@ -4,8 +4,11 @@
   <%= f.error_notification %>
   <%= f.input :description %>
   <%= f.association :ingredient %>
+  <%= f.input :photo, as: :file %>
+  <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
   <%= f.button :submit, class: "btn-primary" %>
   <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-<% end %> <br>
+<% end %> 
+<br>
 <%= link_to "return to cocktails", cocktails_path  %>
 </div>
