@@ -1,0 +1,11 @@
+<div class="container">
+<h1>Add an ingredient</h1>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %> <br>
+<%= link_to "return to cocktails", cocktails_path  %>
+</div>
